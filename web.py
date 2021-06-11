@@ -1,21 +1,16 @@
-from fastapi import FastAPI, Request, File, Form, UploadFile
-from fastapi import templating
+from fastapi import FastAPI, Request, File, UploadFile
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-
 from PIL import Image
 from io import BytesIO
 
-import shutil
 import json
+import shutil
 import base64
 import requests
-import cv2
 import numpy as np
-import urllib.parse
-
 
 app = FastAPI()
 
