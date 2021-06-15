@@ -76,11 +76,11 @@ async def upload_image(request: Request, image: UploadFile = File(...)):
         data = base64.b64encode(img_file.read()).decode("utf-8")
 
     send_data = {"image": data}
-    # response = requests.post(url, data=json.dumps(send_data))
-    # result = response.json()
-    result = {
-        'address': 'Bến Cả, Yên Lập, Vĩnh Tường Vĩnh Phúc', 'address_conf': [0.9249022086461385, 0.931002163887024], 'expiry': '2708/202012', 'expiry_conf': 0.8200896314599297, 'birthday': '15/10-1998', 'birthday_conf': 0.9085860788822174, 'sex': 'Nữ', 'sex_conf': 0.7451381385326385, 'hometown': 'Yên Lập, Vĩnh Tường, Vĩnh Phúc', 'hometown_conf': [0.9324268528393337, 0.9337636345908755], 'id': '026198001937', 'id_conf': 0.9309668292601904, 'name': 'NGUYỄN THỊ QUỲNH', 'name_conf': 0.9327027276158333, 'ethnicity': 'Kinh', 'ethnicity_conf': 'N/A', 'national': 'N/A', 'national_conf': 'N/A', 'document': 'CCCD', 'detect_runtime': 0.763115406036377, 'read_runtime': 1.9872732162475586
-    }
+    response = requests.post(url, data=json.dumps(send_data))
+    result = response.json()
+    # result = {
+    #     'address': 'Bến Cả, Yên Lập, Vĩnh Tường Vĩnh Phúc', 'address_conf': [0.9249022086461385, 0.931002163887024], 'expiry': '2708/202012', 'expiry_conf': 0.8200896314599297, 'birthday': '15/10-1998', 'birthday_conf': 0.9085860788822174, 'sex': 'Nữ', 'sex_conf': 0.7451381385326385, 'hometown': 'Yên Lập, Vĩnh Tường, Vĩnh Phúc', 'hometown_conf': [0.9324268528393337, 0.9337636345908755], 'id': '026198001937', 'id_conf': 0.9309668292601904, 'name': 'NGUYỄN THỊ QUỲNH', 'name_conf': 0.9327027276158333, 'ethnicity': 'Kinh', 'ethnicity_conf': 'N/A', 'national': 'N/A', 'national_conf': 'N/A', 'document': 'CCCD', 'detect_runtime': 0.763115406036377, 'read_runtime': 1.9872732162475586
+    # }
     result = sort_result(result)
     return templates.TemplateResponse(
         "result.html", {"request": request, "result": result}
