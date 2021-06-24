@@ -4,10 +4,56 @@
         <title>OCR Identity Card</title>
 
         <!--CSS file-->
-        <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+        <!-- <link href="{{ url_for('static', path='styles.css') }}" rel="stylesheet"> -->
 
         <!--Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <style>
+            .upload-image {
+                width: 100%;
+                height: 33vh;
+                margin: auto;
+                border: 2px dashed #919191;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .clickable {
+                cursor: pointer !important;
+            }
+
+            .btn-upload-image {
+                width: 168px;
+                height: 36px;
+                background: #ffffff;
+                box-shadow: 0px 4px 8px rgb(0 0 0 / 15%), 0px 0px 8px rgb(0 0 0 / 7%);
+                border-radius: 4px;
+                font-size: 14px;
+                line-height: 0;
+                color: #000000;
+                border: none;
+                transition: 0.4s;
+            }
+
+            .left {
+                border-right: 5px solid #EEEEEE;
+            }
+
+            .uploaded_image{
+                width: 300px;
+            }
+
+            .upload{
+                margin-left: 40px;
+            }
+
+            .test_image div img{
+                width: 300px;
+                margin-top: 5px;
+            }
+        </style>
     </head>
     <body>
 
@@ -34,7 +80,6 @@
 
                         <div class="my-4 text-center d-inline-block">
                             <form method="GET" action="/">
-                                <!-- <input accept="image/*" type="file" autocomplete="off" style="display: none;"> -->
                                 <button type="submit" class="btn-upload-image">Tải ảnh lên</button>
                             </form>
                         </div>
