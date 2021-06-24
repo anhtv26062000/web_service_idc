@@ -57,24 +57,16 @@
     </head>
     <body>
 
-        <header>
-            
-        </header>
-
         <div class="container">
             <div class="row">
                 <!--Upload Image-->
-                <div class="col-lg-6 text-center left" id="upload-image">
-                    <h1>Tải ảnh lên</h1>
-                    <p>
+                <div class="col-lg-6  left" id="upload-image">
+                    <h1 class="text-center">Tải ảnh lên</h1>
+                    <p class="text-center">
                         Các loại giấy tờ hỗ trợ: CMND cũ, CMND mới, Căn cước công dân, Văn bản scan.
                     </p>
                     <div class="content text-center">
                         <div class="text-center">
-                            <!-- <form action="/image" method="POST" enctype="multipart/form-data">
-                                <input accept="image/*" type="file" name="image" autocomplete="off">
-                                <input type="submit">
-                            </form>-->
                             <img class="uploaded_image" src="./static/images/destination.jpg">
                         </div>
 
@@ -84,12 +76,6 @@
                             </form>
                         </div>
                     </div>
-                    <!-- <button type="button" class="mt-4 mb-3 btn-try-now btn btn-primary">
-                        Nhận dạng
-                    </button> -->
-                </div>
-
-                <div class="col-lg-6 right">
                     <h1 class="text-center">Kết Quả Nhận Dạng</h1>
                     <div class="result">
                         <ul>
@@ -100,6 +86,27 @@
                                 </li>
                             {% endfor %}
                         </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center right">
+                    <div class="test_image">
+                        <h1>Thử với ảnh mẫu</h1>
+                        <div>
+                            <a href="{{ './test_image_1' }}">
+                                <img src="./static/images/test_image/ocr-1.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="{{ './test_image_2' }}">
+                                <img src="./static/images/test_image/ocr-2.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="{{ './test_image_3' }}">
+                                <img src="./static/images/test_image/ocr-3.jpg">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
