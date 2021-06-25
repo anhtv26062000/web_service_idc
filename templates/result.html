@@ -76,21 +76,9 @@
                             </form>
                         </div>
                     </div>
-                    <h1 class="text-center">Kết Quả Nhận Dạng</h1>
-                    <div class="result">
-                        <ul>
-                            {% for key, value in  result.items() %}
-                                <li>
-                                    <h6>{{ key|e }}: </h6>
-                                    <p>{{ value|e }}</p>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
+                    
 
-                <div class="col-lg-6 text-center right">
-                    <div class="test_image">
+                    <div class="test_image text-center">
                         <h1>Thử với ảnh mẫu</h1>
                         <div>
                             <a href="{{ './test_image_1' }}">
@@ -107,6 +95,20 @@
                                 <img src="./static/images/test_image/ocr-3.jpg">
                             </a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center right">
+                    <h1 class="text-center">Kết Quả Nhận Dạng</h1>
+                    <div class="result">
+                        <ul>
+                            {% for key, value in  result.items() %}
+                                <li>
+                                    <h6>{{ key|e }}: </h6>
+                                    <p>{{ value|e }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
                 
